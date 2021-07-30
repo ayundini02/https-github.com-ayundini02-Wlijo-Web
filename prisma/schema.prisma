@@ -1,0 +1,20 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./wlijo.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Produk {
+  id Int @id @default(autoincrement())
+  jenis String
+  gambar String
+  nama String
+  harga String
+  deskripsi String
+}
